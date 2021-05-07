@@ -1,0 +1,9 @@
+# calculator_exercise12.py
+# This program evaluates 100 expressions entered by a user
+
+def main():
+    print("Welcome to the Interactive Python Calculator!")
+    for i in range(100):
+        expression = eval(input("What expression would you like Python to solve? "))
+        print(expression)
+main()
