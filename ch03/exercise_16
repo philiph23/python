@@ -1,0 +1,13 @@
+# fibonacci.py
+# ch 3 ex 16
+# compute the nth Fibonacci number where n is a value input by the user
+
+def main():
+    print("This program calculates the nth Fibonacci number where n is a value from the user.")
+    n = int(input("Enter n: "))
+    curr, prev = 1, 1   
+    for i in range(n-2):
+        curr, prev = curr+prev, curr
+    print("The nth Fibonacci number is", curr)
+
+main()
