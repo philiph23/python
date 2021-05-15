@@ -1,0 +1,31 @@
+# ch04
+# exercise 1
+# Alter the program from the last discussion question in the following way
+# Make it draw squares instead of circles
+# Have each successive click draw and additional square
+# Print a message on the window "Click agai nto quit" after the loop,
+# and wait for a final click before closing the window
+
+from graphics import *
+
+def main():
+    win = GraphWin()
+    shape = Rectangle(Point(50, 50), Point(100, 100))
+    shape.setOutline("red")
+    shape.setFill("red")
+    shape.draw(win)
+    for i in range(10):
+        p = win.getMouse()
+        pX = p.getX()
+        pY = p.getY()
+        new_shape = Rectangle(Point(pX-25, pY+25), Point(pX+25, pY-25))
+        new_shape.setOutline("red")
+        new_shape.setFill("red")
+        new_shape.draw(win)
+    text = Text(Point(100, 100), "Click again to quit")
+    text.setStyle("bold")
+    text.draw(win)
+    win.getMouse()
+    win.close()
+
+main()
