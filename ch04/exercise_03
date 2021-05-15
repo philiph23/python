@@ -1,0 +1,31 @@
+# ch04
+# exercise 3
+# Write a program that draws some sort of face
+
+from graphics import *
+
+def main():
+    win = GraphWin()
+
+    face = Circle(Point(100, 100), 75)
+    face.setFill(color_rgb(255, 204, 34))
+    face.setOutline(color_rgb(255, 204, 34))
+    face.draw(win)
+
+    lefteye = Circle(Point(70, 75), 15)
+    lefteye.setFill("brown")
+    lefteye.setOutline("brown")
+    lefteye.draw(win)
+
+    righteye = Circle(Point(130, 75), 15)
+    righteye.setFill("brown")
+    righteye.setOutline("brown")
+    righteye.draw(win)
+
+    mouth = Line(Point(50, 125), Point(150, 125))
+    mouth.setFill("brown")
+    mouth.setOutline("brown")
+    mouth.setWidth(10)
+    mouth.draw(win)
+
+main()
